@@ -1,5 +1,3 @@
-# Wheather-Api
-For weather forecast API
 # Google App Engine generated folder
 appengine-generated/
 
