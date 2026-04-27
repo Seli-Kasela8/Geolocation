@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASELA Geolocation Intelligence | Live GPS Analytics & Mapping</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-section">
+                <h1>🌍 KASELA Geolocation Intelligence</h1>
+                <p>Live GPS Analytics & Location-Based Services for Tourism Operations</p>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-section="dashboard">Dashboard</button>
+                <button class="nav-btn" data-section="map">Live Map</button>
+                <button class="nav-btn" data-section="analytics">Analytics</button>
+                <button class="nav-btn" data-section="tracking">Tracking</button>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="section active">
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Active Locations</h3>
+                        <p class="stat-value" id="activeLocations">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Distance</h3>
+                        <p class="stat-value" id="totalDistance">0 km</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Avg Speed</h3>
+                        <p class="stat-value" id="avgSpeed">0 km/h</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Tracking Sessions</h3>
+                        <p class="stat-value" id="sessions">0</p>
+                    </div>
+                </div>
+                <div class="recent-activity">
+                    <h2>📍 Recent Location Updates</h2>
+                    <div id="activityLog" class="activity-log"></div>
+                </div>
+            </section>
+
+            <!-- Map Section -->
+            <section id="map" class="section">
+                <div id="mapContainer" class="map-container"></div>
+                <div class="map-controls">
+                    <button id="startTracking" class="btn btn-primary">Start Tracking</button>
+                    <button id="stopTracking" class="btn btn-secondary">Stop Tracking</button>
+                    <button id="clearMap" class="btn btn-danger">Clear Map</button>
+                </div>
+            </section>
+
+            <!-- Analytics Section -->
+            <section id="analytics" class="section">
+                <div class="analytics-grid">
+                    <div class="chart-container">
+                        <h3>Location Heat Map</h3>
+                        <canvas id="heatmapChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Speed Distribution</h3>
+                        <canvas id="speedChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Accuracy Metrics</h3>
+                        <canvas id="accuracyChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tracking Section -->
+            <section id="tracking" class="section">
+                <div class="tracking-panel">
+                    <h2>🎯 Real-Time Tracking</h2>
+                    <div class="tracking-info">
+                        <div class="info-item">
+                            <label>Current Latitude:</label>
+                            <span id="currentLat">--</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Current Longitude:</label>
+                            <span id="currentLng">--</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Accuracy:</label>
+                            <span id="currentAccuracy">-- m</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Altitude:</label>
+                            <span id="currentAltitude">-- m</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Speed:</label>
+                            <span id="currentSpeed">-- km/h</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Heading:</label>
+                            <span id="currentHeading">-- °</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>KASELA™ TECH | Advanced Geolocation Intelligence | Powered by GPS Analytics</p>
+            <p>Building premium tourism technology from Bali to the world 🌍</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="js/geolocation.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

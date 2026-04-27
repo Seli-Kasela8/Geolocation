@@ -1,0 +1,30 @@
+{
+  "name": "kasela-geolocation",
+  "version": "1.0.0",
+  "description": "Live Geolocation Intelligence - GPS tracking, analytics, and mapping for tourism operations",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "geolocation",
+    "gps",
+    "tracking",
+    "mapping",
+    "analytics",
+    "tourism",
+    "leaflet",
+    "chartjs"
+  ],
+  "author": "Seli Kasela - KASELA TECH",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Seli-Kasela8/Geolocation.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
